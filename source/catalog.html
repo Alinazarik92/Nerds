@@ -37,8 +37,76 @@
         </nav>
       </header>
       <main>
-        <h1 class="hidden">Дизайн-студия Nerds</h1>
+        <h1 class="page-title">Магазин готовых шаблонов</h1>
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+          <div class="filter__range filter-range">
+            <h2 class="filter-range__title">Стоимость</h2>
+            <div class="filter-range__controls">
+              <div class="filter-range__scale">
+                <button class="filter-range__toggle filter-range__toggle--min" type="button"></button>
+                <div class="filter-range__bar"></div>
+                <button class="filter-range__toggle filter-range__toggle--max" type="button"></button>
+              </div>
+            </div>
+            <div class="filter-range__price-container">
+              <label class="filter-range__text" for="min-value">от</label>
+              <input class="filter-range__min-value" type="text" value="0" name="min-value" id="min-value">
+              <label class="filter-range__text" for="max-value">до</label>
+              <input class="filter-range__max-value" type="text" value="15000" name="max-value" id="max-value">
+            </div>
+          </div>
+          <fieldset class="filter__net net">
+            <legend class="net__title">Сетка</legend>
+            <input class="net__radio" type="radio" value="adaptive" name="adaptive" id="adaptive" checked>
+            <label class="net__label" for="adaptive">Адаптивная</label>
+            <input class="net__radio" type="radio" value="fix" name="fix" id="fix">
+            <label class="net__label" for="fix">Фиксированная</label>
+            <input class="net__radio" type="radio" value="fluid" name="fluid" id="fluid">
+            <label class="net__label" for="fluid">Резиновая</label>
+          </fieldset>
+          <fieldset class="filter__features features">
+            <legend class="features__title">Особенности:</legend>
+            <input class="features__checkbox" type="checkbox" value="slider" name="slider" id="slider" checked>
+            <label class="features__label" for="slider">Слайдер</label>
+            <input class="features__checkbox" type="checkbox" value="advatages" name="advatages" id="advatages">
+            <label class="features__label" for="advatages">Блок преимуществ</label>
+            <input class="features__checkbox" type="checkbox" value="news" name="news" id="news" checked>
+            <label class="features__label" for="news">Новости</label>
+            <input class="features__checkbox" type="checkbox" value="gallery" name="gallery" id="gallery">
+            <label class="features__label" for="gallery">Галерея</label>
+            <input class="features__checkbox" type="checkbox" value="basket" name="basket" id="basket">
+            <label class="features__label" for="basket">Корзина</label>
+          </fieldset>
+          <button class="filter__button button" type="submit">Показать</button>
+        </form>
+        <div class="catalog-container">
+          <div class="catalog-container__sort sort">
+            <h2 class="sort__title">Сортировать:</h2>
+            <button class="sort__button" type="button">По цене</button>
+            <button class="sort__button" type="button">По типу</button>
+            <button class="sort__button" type="button">По названию</button>
+            <button class="sort__up" type="button"></button>
+            <button class="sort__down" type="button"></button>
+          </div>
+          <section class="catalog-container__catalog catalog">
+            <h2 class="visually-hidden">Каталог</h2>
 
+          </section>
+        </div>
+        <ul class="pagination-list">
+          <li class="pagination-list__button button">
+            <a>1</a>
+          </li>
+          <li class="pagination-list__button button">
+            <a href="#nowhere">2</a>
+          </li>
+          <li class="pagination-list__button button">
+            <a href="#nowhere">3</a>
+          </li>
+          <li class="pagination-list__button pagination-list__button--next button">
+            <a href="#nowhere">Следующая</a>
+          </li>
+        </ul>
       </main>
       <footer class="page-footer">
         <ul class="page-footer__social">
